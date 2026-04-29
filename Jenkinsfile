@@ -4,13 +4,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Compiling Java file'
-                bat 'javac ArmstrongNumbers.java'
+                sh 'javac ArmstrongNumbers.java'
             }
         }
         stage('Test') {
             steps {
                 echo 'Running program'
-                bat 'java ArmstrongNumbers'
+                sh 'java ArmstrongNumbers'
             }
         }
     }
